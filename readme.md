@@ -9,7 +9,7 @@
 2. 必要な環境変数を入力して、保存する
 
 
-### 2. プラグインをインストールしたカスタムイメージを作成する
+### 2. 日本語プラグインをインストールしたカスタムイメージを作成する
 
 ```bash
 docker build -t ikeshun15/elasticsearch:8.17.1 .
@@ -17,18 +17,31 @@ docker build -t ikeshun15/elasticsearch:8.17.1 .
 
 
 ## 起動・終了手順
-### コンテナを立ち上げ
+### Elasticsearch, Kibana
+
+#### コンテナ立ち上げ
 
 ```bash
+cd main_modules
 docker compose up -d
 ```
 
-
-### コンテナを立ち下げ
+#### コンテナ立ち下げ
 
 ```bash
 docker compose down
 ```
 
+### Connector
+```bash
+cd connectors
+docker compose up -d
+```
+
+#### コンテナ立ち下げ
+
+```bash
+docker compose down
+```
 
 Created by 🍓
