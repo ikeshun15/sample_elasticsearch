@@ -1,6 +1,7 @@
 services:
   elastic-connectors:
     image: docker.elastic.co/integrations/elastic-connectors:8.17.1
+    container_name: elastic-connectors
     volumes:
       - ./config:/config
     command: [ "/app/bin/elastic-ingest", "-c", "/config/config.yml" ]
